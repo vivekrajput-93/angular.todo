@@ -1,0 +1,134 @@
+
+
+.heading-section {
+    
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: steelblue;
+    color: white;
+}
+
+.heading-section h2 {
+    font-size: 3rem;
+}
+
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.input-section input {
+    outline: steelblue;
+    border: none;
+    padding: 10px;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.input-section button {
+    padding: 10px 50px;
+    border: none;
+    background-color: steelblue;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.todo-display-section {
+    display: block;
+    width: 800px;
+    margin: auto;
+    
+    margin-top:3rem ;
+    height: fit-content;
+    background-color: rgb(225, 231, 239);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 3rem;
+}
+
+.todo-display-section h3 {
+    text-align: center;
+    color: steelblue;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+.card-section {
+    
+    padding: 10px 20px;
+}
+
+.todo {
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    gap: 1rem;
+
+}
+
+
+.icons-section {
+    display: flex;
+    gap: 1rem;
+    padding: 10px 15px;
+    justify-content: end;
+
+}
+
+.icons-section div {
+    background-color: steelblue;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.main-content {
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: white;
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;   
+}
+
+
+svg {
+    width: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
