@@ -1,0 +1,11 @@
+    <div class="dialog-box">
+        <h2 mat-dialog-title class="main-title">Edit Todo</h2>
+        <mat-dialog-content class="input-section">
+            <input  [(ngModel)]="editedTodo" placeholder="Edit your todo" required=true>
+
+        </mat-dialog-content>
+        <mat-dialog-actions class="button-section">
+            <button class="close-button" mat-button (click)="save()">Save</button>
+            <button class="close-button" mat-button mat-dialog-close>Cancel</button>
+        </mat-dialog-actions>
+    </div>

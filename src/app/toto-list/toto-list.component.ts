@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { PickerComponent } from '@ctrl/ngx-emoji-mart';
+import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
   selector: 'app-toto-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, PickerComponent],
+  imports: [CommonModule, FormsModule, PickerComponent, TodoDialogComponent],
   templateUrl: './toto-list.component.html',
   styleUrl: './toto-list.component.scss'
 })
@@ -15,6 +17,7 @@ export class TotoListComponent {
 
     todos : string[] = [];
      userInput : string = "";
+  // dialog: any;
 
 
      ngOnInit() {
@@ -42,7 +45,25 @@ export class TotoListComponent {
       this.saveTodos();
      }
 
-     addEmoji(event: any) {
-      this.userInput += event.emoji.native;
+
+
+    
+    readonly dialog = inject(MatDialog);
+
+    openDialog(index: number, todo: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
+      const dialogRef = this.dialog.open(TodoDialogComponent, {
+        width: '360px',
+        enterAnimationDuration,
+        exitAnimationDuration,
+        data: { todo }
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.todos[index] = result;
+          this.saveTodos();
+        }
+      });
     }
+  
 }
