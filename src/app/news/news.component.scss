@@ -1,0 +1,67 @@
+
+
+.layout-section {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.layout-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: rgb(37, 223, 111);
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3rem;
+    padding-left: .8rem;
+    margin-bottom: 3rem;
+}
+
+.example-card .title {
+    color: rgb(37, 223, 111);
+}
+
+.example-card p {
+    color: rgb(37, 223, 111);
+}
+
+.layout-section span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(37, 223, 111);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.example-card {
+    max-width: 380px;
+    background-color: #111;
+    height: 180px;
+  }
+  
+  .example-card-footer {
+    padding: 16px;
+  }
+  
+
+
+.main-heading {
+    text-align: center;
+    margin: 2rem 0rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
