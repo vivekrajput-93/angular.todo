@@ -1,0 +1,20 @@
+<section class="header-container">
+    <h2 class="main-heading">Weatherly</h2>
+</section>
+<div class="main-container">
+    <section>
+        <div class="search-container">
+            <input type="text" [(ngModel)]="cityName" placeholder="Enter your city name">
+            <button (click)="handleSearch()">Search</button>
+        </div>
+    </section>
+    <section *ngIf="WeatherApi">
+        <div class="weather-details">
+            <img [src]="getWeatherIcon()" alt="Weather Icon">
+            <p><strong>Temperature:</strong> {{ convertToCelsius(WeatherApi.main.temp) }}°C</p>
+            <p><strong>Condition:</strong> {{ WeatherApi.weather[0].description | titlecase }}</p>
+            <p><strong>Humidity:</strong> {{ WeatherApi.main.humidity }}%</p>
+            <p><strong>Wind Speed:</strong> {{ WeatherApi.wind.speed }} m/s</p>
+        </div>
+    </section>
+</div>

@@ -10,7 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
   imports: [MatCardModule, MatChipsModule, MatProgressBarModule, CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss'],  // Corrected to styleUrls
+  styleUrls: ['./news.component.scss'],  
 })
 export class NewsComponent implements OnInit {
   newsLine: any;
@@ -18,6 +18,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.getApiResponse();
+    
   }
 
   getApiResponse() {
