@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { PickerComponent } from '@ctrl/ngx-emoji-mart';
 import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
@@ -66,4 +66,11 @@ export class TotoListComponent {
       });
     }
   
+
+    @HostListener('document:keydown.enter', ['$event'])
+    handleKeyboardEvent(event: KeyboardEvent) {
+      if (event.target instanceof HTMLInputElement && event.target.placeholder === 'write something...') {
+        this.addTodo();
+      }
+    }
 }

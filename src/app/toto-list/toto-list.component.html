@@ -5,19 +5,15 @@
 
     <div class="input-section">
         <div>
-
-
             <input type="text" placeholder="write something..." [(ngModel)]="userInput" required=true>
         </div>
         <button (click)="addTodo()">Add</button>
-
     </div>
 
 
     <div class="todo-display-section">
         <h3>Welcome to the Todo section</h3>
         <div class="card-section" *ngFor="let todo of  todos; let i= index">
-
             <div class="todo">
                 <div class="icons-section">
                     <div (click)="deleteTodos(i)"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
