@@ -17,7 +17,7 @@ export class TotoListComponent {
 
     todos : string[] = [];
      userInput : string = "";
-  // dialog: any;
+
 
 
      ngOnInit() {
@@ -44,11 +44,9 @@ export class TotoListComponent {
       this.todos.splice(index, 1)
       this.saveTodos();
      }
-
-
-
     
     readonly dialog = inject(MatDialog);
+
 
     openDialog(index: number, todo: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
       const dialogRef = this.dialog.open(TodoDialogComponent, {
