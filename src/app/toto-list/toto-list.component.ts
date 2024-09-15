@@ -28,6 +28,8 @@ export class TotoListComponent {
     }
 
 
+    
+
      saveTodos() {
       localStorage.setItem('todos', JSON.stringify(this.todos))
      }
